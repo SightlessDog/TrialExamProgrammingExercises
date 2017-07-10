@@ -7,15 +7,17 @@ public class List<E> {
 	/**
 	 * returns the position of the first occurrence of data
 	 * in the linked list.
-	 * @param data
+	 * @param E data - the data to search for
 	 */
 	public int getIndex(E data){
 		return -1;
 		
 	}
-
-	public void add(String string) {
-		// TODO Auto-generated method stub
-		
+	/**
+	 * adds data as first element to the list
+	 * @param E data - the data to add
+	 */
+	public void add(E data) {
+		first = new Node<E>(data,first);
 	}
 }
