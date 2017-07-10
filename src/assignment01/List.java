@@ -1,15 +1,29 @@
 package assignment01;
 
+/**
+ * Assignment 01: 
+ * Implement the getIndex() method.
+ * 
+ */
 public class List<E> {
 	
 	Node<E> first;
 	
 	/**
-	 * returns the position of the first occurrence of data
-	 * in the linked list.
+	 * Returns the position of the first occurrence of data
+	 * in the linked list, starting at 1.
+	 * 
+	 * It should return -1 if
+	 * - null is passed as an argument
+	 * - the list is empty, or
+	 * - the list doesn't contain the element.
+	 * 
+	 * Comparison is done by calling equals() on the data.
+	 * 
 	 * @param E data - the data to search for
 	 */
 	public int getIndex(E data){
+		// replace with your code
 		return -1;
 		
 	}
