@@ -1,4 +1,4 @@
-package assignment01;
+package assignment_01_list;
 
 
 public class Node<E> {
