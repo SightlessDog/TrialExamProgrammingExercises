@@ -1,18 +1,18 @@
 package assignment_02_permutation;
 
-import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.Random;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class ArrayPermutatorTest {
 
 	Random randomGenerator;
 
-	@Before
+	@BeforeEach
 	public void createSameRandomGeneratorForEachTest() {
 		randomGenerator = new Random(43);
 	}

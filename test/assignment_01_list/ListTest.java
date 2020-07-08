@@ -1,13 +1,11 @@
 package assignment_01_list;
 
-import static org.junit.Assert.*;
-
-import org.junit.Before;
-import org.junit.Test;
-
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 public class ListTest {
 	List<String> list;
-	@Before
+	@BeforeEach
 	public void setup(){
 		list = new List<>();
 	}

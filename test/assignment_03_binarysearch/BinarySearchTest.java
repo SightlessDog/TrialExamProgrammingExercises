@@ -1,14 +1,13 @@
 package assignment_03_binarysearch;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class BinarySearchTest {
 	BinarySearchTree<String, Object> tree;
 
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 		tree = new BinarySearchTree<String, Object>();
 		tree.insert("b");
