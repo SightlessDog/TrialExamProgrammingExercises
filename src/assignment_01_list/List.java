@@ -2,7 +2,9 @@ package assignment_01_list;
 
 /**
  * Assignment 01: 
- * Implement the getIndex() method.
+ *
+ * This class implements a quite simple linked list.
+ * Your assignment is to implement the getIndex() method.
  * 
  */
 public class List<E> {

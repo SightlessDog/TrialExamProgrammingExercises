@@ -10,34 +10,31 @@ import org.junit.jupiter.api.Test;
 
 public class ArrayPermutatorTest {
 
-	Random randomGenerator;
+	public static final int SEED = 42;
 
-	@BeforeEach
-	public void createSameRandomGeneratorForEachTest() {
-		randomGenerator = new Random(43);
-	}
 
 	@Test
 	public void testShuffleInts() {
-		ArrayPermutator<Integer> sut = new ArrayPermutator<>(randomGenerator);
+		ArrayPermutator<Integer> sut = new ArrayPermutator<>(new Random(SEED));
 		Integer[] a = new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		Integer[] original = Arrays.copyOf(a, a.length);
 
 		sut.shuffle(a);
 		
 		// there are two ways to implement the shuffle - starting from the start
-		// and starting from the beginning.
+		// and starting from the beginning. Both are ok, these are the two possible
+		// results:
 		Integer[] expected_b = new Integer[] { 5, 8, 3, 1, 2, 6, 4, 10, 9, 7 };
 		Integer[] expected_f = new Integer[] { 7, 10, 9, 1, 2, 4, 6, 5, 3, 8};
-		
+
+		// assertShuffle is a convenience method providing richer feedback
 		assertShuffle(a, original, expected_b, expected_f, "testShuffleInts");
 	}
-
 
 	@Test
 	public void testShuffleStrings() {
 		String[] a = "a b c d e f g h i j k l m n o p".split(" ");
-		ArrayPermutator<String> sut = new ArrayPermutator<>(randomGenerator);
+		ArrayPermutator<String> sut = new ArrayPermutator<>(new Random(SEED));
 		String[] original = Arrays.copyOf(a, a.length);
 
 		sut.shuffle(a);
@@ -51,7 +48,7 @@ public class ArrayPermutatorTest {
 	@Test
 	public void testOneElement() {
 		String[] a = { "a" };
-		ArrayPermutator<String> sut = new ArrayPermutator<>(randomGenerator);
+		ArrayPermutator<String> sut = new ArrayPermutator<>(new Random(SEED));
 		
 		sut.shuffle(a);
 		
@@ -61,7 +58,7 @@ public class ArrayPermutatorTest {
 	@Test
 	public void testEmptyArray() {
 		String[] a = { };
-		ArrayPermutator<String> sut = new ArrayPermutator<>(randomGenerator);
+		ArrayPermutator<String> sut = new ArrayPermutator<>(new Random(SEED));
 		
 		sut.shuffle(a);
 		
@@ -71,7 +68,7 @@ public class ArrayPermutatorTest {
 
 	@Test
 	public void testTwoElements() {
-		ArrayPermutator<Integer> sut = new ArrayPermutator<>(randomGenerator);
+		ArrayPermutator<Integer> sut = new ArrayPermutator<>(new Random(SEED));
 		Integer[] a = new Integer[] { 4, 7 };
 		Integer[] original = Arrays.copyOf(a, a.length);
 		
